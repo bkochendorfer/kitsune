@@ -49,6 +49,9 @@ module.exports = {
           options: {
             emitCss: true,
             preprocess: sveltePreprocess(),
+            compilerOptions: {
+              hydratable: true,
+            }
           },
         },
       },
@@ -69,7 +72,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(svg|png|gif|woff2?)$/,
+        test: /\.(svg|png|webp|gif|woff2?)$/,
         type: "asset/resource",
       },
       // we copy these libraries from external sources, so define their exports here,
